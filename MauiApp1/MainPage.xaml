@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiApp1.MainPage" Background="#2C3539">
+    <Grid>
+        <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="35" HorizontalOptions="Center" TextColor="AliceBlue"/>
+        <Frame BackgroundColor="#3A3B3C" WidthRequest="350" HeightRequest="430" CornerRadius="15">
+                <StackLayout Spacing="20" VerticalOptions="Center"> <Label Text="Please enter length of password" TextColor="AliceBlue" HorizontalOptions="Center" Margin="0, -30, 0, 10"/>
+    
+                    <Label Text="{Binding Length}" FontSize="40" TextColor="Orange" HorizontalOptions="Center" FontAttributes="Bold" />
+    
+                    <Stepper Minimum="5" Maximum="24" Increment="1" Value="{Binding Length}" HorizontalOptions="Center"/>
+    
+                    <Button Text="Generate password" 
+                            FontAttributes="Bold" 
+                            TextColor="Indigo" 
+                            BackgroundColor="#FDD017" 
+                            HeightRequest="50" 
+                            WidthRequest="155" 
+                            Command="{Binding GeneratePasswordCommand}"/>
+
+                    <Entry Text="{Binding ReadyPassword}"
+                           TextColor="White"
+                           FontSize="22"
+                           HorizontalOptions="Center"
+                           IsReadOnly="True"
+                           HorizontalTextAlignment="Center" />
+
+                    <Button Text="Copy 📋"
+                            TextColor="White"
+                            BackgroundColor="#512BD4"
+                            HeightRequest="40"
+                            WidthRequest="120"
+                            Command="{Binding CopyPasswordCommand}" />
+            
+                </StackLayout>
+            </Frame>
+    </Grid>
+    
+</ContentPage>
