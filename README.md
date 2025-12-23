@@ -3,7 +3,7 @@
 A simple, secure, and modern password generator built with **.NET MAUI** and **CommunityToolkit.MVVM**.
 
 ## 📱 Features
-* **Custom Length:** Generate passwords from 5 to 50 characters.
+* **Custom Length:** Generate passwords from 5 to 24 characters.
 * **Secure Random:** Uses `Random.Shared` for better randomness.
 * **Clipboard Support:** Copy generated password with one click.
 * **Modern UI:** Built with .NET MAUI XAML and MVVM pattern.
