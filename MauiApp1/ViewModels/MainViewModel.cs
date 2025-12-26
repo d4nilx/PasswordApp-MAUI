@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using System.Security.Cryptography;
 
 namespace MauiApp1.ViewModels;
 
@@ -14,14 +15,14 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private void GeneratePassword()
     {
-        string chars = "ABCDEFGHIJKLMNOPQRSTVWXYZabcdefghijklmnopqrstvwxyz0123456789!@#$%^&*|/><~.,;:[]{}£§+-=";
-        Random rnd = new Random();
+        string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*|/><~.,;:[]{}£§+-=";
         
         char[] result = new char[Length];
 
         for (int i = 0; i < result.Length; i++)
         {
-            result[i] = chars[rnd.Next(chars.Length)];
+            int randomIndex = RandomNumberGenerator.GetInt32(chars.Length);
+            result[i] = chars[randomIndex];
         }
         ReadyPassword = new string(result);
     }

@@ -13,7 +13,7 @@
                     <Stepper Minimum="5" Maximum="24" Increment="1" Value="{Binding Length}" HorizontalOptions="Center"/>
     
                     <Button Text="Generate password" 
-                            FontAttributes="Bold" 
+                            FontAttributes="Bold"   
                             TextColor="Indigo" 
                             BackgroundColor="#FDD017" 
                             HeightRequest="50" 
